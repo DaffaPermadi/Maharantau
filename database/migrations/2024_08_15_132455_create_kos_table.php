@@ -12,8 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+                $table->id();
+                $table->string('nama_kos');
+                $table->text('alamat');
+                $table->string('kota');
+                $table->string('pemilik');
+                $table->string('nomor_telepon');
+                $table->enum('jenis_kos', ['putra', 'putri', 'campur']);
+                $table->decimal('harga_per_bulan', 10, 2);
+                $table->integer('jumlah_kamar');
+                $table->timestamps();
+
         });
     }
 
