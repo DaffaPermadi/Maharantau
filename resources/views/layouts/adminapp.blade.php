@@ -23,7 +23,9 @@
     <link href="{{ asset('datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-primary">
+{{-- <body class="bg-gradient-primary"> --}}
+
+<body>
     <!-- Your content here -->
 
     @yield('content')

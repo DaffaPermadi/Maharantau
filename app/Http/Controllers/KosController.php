@@ -30,22 +30,22 @@ class KosController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-        $validatedData = $request->validate([
-            'nama_kos' => 'required|max:255',
-            'alamat' => 'required',
-            'kota' => 'required|max:255',
-            'pemilik' => 'required|max:255',
-            'nomor_telepon' => 'required|max:255',
-            'jenis_kos' => 'required|in:putra,putri,campur',
-            'harga_per_bulan' => 'required',
-            'jumlah_kamar' => 'required',
-        ]);
+        // $validatedData = $request->validate([
+        //     'nama_kos' => 'required|max:255',
+        //     'alamat' => 'required',
+        //     'kota' => 'required|max:255',
+        //     'pemilik' => 'required|max:255',
+        //     'nomor_telepon' => 'required|max:255',
+        //     'jenis_kos' => 'required|in:putra,putri,campur',
+        //     'harga_per_bulan' => 'required',
+        //     'jumlah_kamar' => 'required',
+        // ]);
 
-        // dd($validatedData);
+        // // dd($validatedData);
 
-        Kos::create($validatedData);
+        // Kos::create($validatedData);
 
-        return redirect()->route('kos.index')->with('success', 'Data kos berhasil ditambahkan.');
+        // return redirect()->route('kos.index')->with('success', 'Data kos berhasil ditambahkan.');
     }
 
     /**
